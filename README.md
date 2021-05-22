@@ -30,10 +30,10 @@
 
 | 题号                                                         | 描述 | 完成状态 |
 | ------------------------------------------------------------ | ---- | -------- |
-| [485. 最大连续1的个数](https://leetcode-cn.com/problems/max-consecutive-ones/) | 简单 | 1        |
-| [495. 提莫攻击](https://leetcode-cn.com/problems/teemo-attacking/) |      |          |
+| [485. 最大连续1的个数](https://leetcode-cn.com/problems/max-consecutive-ones/) |      | 1        |
+| [495. 提莫攻击](https://leetcode-cn.com/problems/teemo-attacking/) |      | 1        |
 | [414. 第三大的数](https://leetcode-cn.com/problems/third-maximum-number/) |      | 1        |
-| [628. 三个数的最大乘积](https://leetcode-cn.com/problems/maximum-product-of-three-numbers/) |      |          |
+| [628. 三个数的最大乘积](https://leetcode-cn.com/problems/maximum-product-of-three-numbers/) |      | 1        |
 
 
 
@@ -41,7 +41,7 @@
 
 | 题号                                                         | 描述 | 完成状态 |
 | ------------------------------------------------------------ | ---- | -------- |
-| [645. 错误的集合](https://leetcode-cn.com/problems/set-mismatch/) |      |          |
+| [645. 错误的集合](https://leetcode-cn.com/problems/set-mismatch/) |      | 1        |
 | [697. 数组的度](https://leetcode-cn.com/problems/degree-of-an-array/) |      |          |
 | [448. 找到所有数组中消失的数字](https://leetcode-cn.com/problems/find-all-numbers-disappeared-in-an-array/) |      |          |
 | [442. 数组中重复的数据](https://leetcode-cn.com/problems/find-all-duplicates-in-an-array/) |      |          |
