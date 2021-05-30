@@ -1,62 +1,65 @@
 # leetcode题解
 
+> 本项目『[网页版](https://hacv.github.io/leetcode/)』
+
 
 
 - C++11版
-- Python3版
 - Java8版
+
+```txt
 - Scala版
-- 纯C版
-
-
+- Python3版
+- Go版
+```
 
 
 
 ## 刷题顺序
 
-> 参考自：noone_：https://leetcode-cn.com/circle/article/48kq9d/
-
-- 笔者对其进行了改进，并且给其加上链接
-
-
-
 
 
 ## 01.数组
 
-
-
 1.1.数组的遍历
 
-| 题号                                                         | 描述 | 完成状态 |
-| ------------------------------------------------------------ | ---- | -------- |
-| [485. 最大连续1的个数](https://leetcode-cn.com/problems/max-consecutive-ones/) |      | 1        |
-| [495. 提莫攻击](https://leetcode-cn.com/problems/teemo-attacking/) |      | 1        |
-| [414. 第三大的数](https://leetcode-cn.com/problems/third-maximum-number/) |      | 1        |
-| [628. 三个数的最大乘积](https://leetcode-cn.com/problems/maximum-product-of-three-numbers/) |      | 1        |
+| 题号                                                         | C++11 | Java8 |
+| ------------------------------------------------------------ | ----- | ----- |
+| [485. 最大连续1的个数](https://leetcode-cn.com/problems/max-consecutive-ones/) | 1     |       |
+| [495. 提莫攻击](https://leetcode-cn.com/problems/teemo-attacking/) | 1     |       |
+| [414. 第三大的数](https://leetcode-cn.com/problems/third-maximum-number/) | 1     |       |
+| [628. 三个数的最大乘积](https://leetcode-cn.com/problems/maximum-product-of-three-numbers/) | 1     |       |
+
+
 
 
 
 1.2.统计数组中的元素
 
-| 题号                                                         | 描述 | 完成状态 |
-| ------------------------------------------------------------ | ---- | -------- |
-| [645. 错误的集合](https://leetcode-cn.com/problems/set-mismatch/) |      | 1        |
-| [697. 数组的度](https://leetcode-cn.com/problems/degree-of-an-array/) |      |          |
-| [448. 找到所有数组中消失的数字](https://leetcode-cn.com/problems/find-all-numbers-disappeared-in-an-array/) |      |          |
-| [442. 数组中重复的数据](https://leetcode-cn.com/problems/find-all-duplicates-in-an-array/) |      |          |
-| [41. 缺失的第一个正数](https://leetcode-cn.com/problems/first-missing-positive/) |      |          |
-| [274. H 指数](https://leetcode-cn.com/problems/h-index/)     |      |          |
+| 题号                                                         | C++11 | Java8 |
+| ------------------------------------------------------------ | ----- | ----- |
+| [645. 错误的集合](https://leetcode-cn.com/problems/set-mismatch/) | 1     |       |
+| [697. 数组的度](https://leetcode-cn.com/problems/degree-of-an-array/) |       |       |
+| [448. 找到所有数组中消失的数字](https://leetcode-cn.com/problems/find-all-numbers-disappeared-in-an-array/) | 1     |       |
+| [442. 数组中重复的数据](https://leetcode-cn.com/problems/find-all-duplicates-in-an-array/) |       |       |
+| [41. 缺失的第一个正数](https://leetcode-cn.com/problems/first-missing-positive/) |       |       |
+| [274. H 指数](https://leetcode-cn.com/problems/h-index/)     |       |       |
+
+
+
+
 
 
 
 1.3.数组的改变、移动
 
-| 题号                                                         | 描述 | 完成状态 |
-| ------------------------------------------------------------ | ---- | -------- |
-| [453. 最小移动次数使数组元素相等](https://leetcode-cn.com/problems/minimum-moves-to-equal-array-elements/) |      |          |
-| [665. 非递减数列](https://leetcode-cn.com/problems/non-decreasing-array/) |      |          |
-| [283. 移动零](https://leetcode-cn.com/problems/move-zeroes/) |      | 1        |
+| 题号                                                         | C++11 | Java8 |
+| ------------------------------------------------------------ | ----- | ----- |
+| [453. 最小移动次数使数组元素相等](https://leetcode-cn.com/problems/minimum-moves-to-equal-array-elements/) |       |       |
+| [665. 非递减数列](https://leetcode-cn.com/problems/non-decreasing-array/) |       |       |
+| [283. 移动零](https://leetcode-cn.com/problems/move-zeroes/) | 1     |       |
+
+
 
 
 
@@ -72,12 +75,16 @@
 
 
 
+
+
 1.5.数组的旋转
 
 | 题号                                                         | 描述 | 完成状态 |
 | ------------------------------------------------------------ | ---- | -------- |
 | [189. 旋转数组](https://leetcode-cn.com/problems/rotate-array/) |      |          |
 | [396. 旋转函数](https://leetcode-cn.com/problems/rotate-function/) |      |          |
+
+
 
 
 
@@ -91,6 +98,8 @@
 
 
 
+
+
 1.7.二维数组变换
 
 | 题号                                                         | 描述 | 完成状态 |
@@ -99,6 +108,8 @@
 | [48. 旋转图像](https://leetcode-cn.com/problems/rotate-image/) |      |          |
 | [73. 矩阵置零](https://leetcode-cn.com/problems/set-matrix-zeroes/) |      |          |
 | [289. 生命游戏](https://leetcode-cn.com/problems/game-of-life/) |      |          |
+
+
 
 
 
@@ -124,6 +135,8 @@
 
 
 
+
+
 2.2.回文串的定义	
 
 | 题号                                                         |      |      |
@@ -137,6 +150,8 @@
 | 题号                                                         |      |      |
 | ------------------------------------------------------------ | ---- | ---- |
 | [14. 最长公共前缀](https://leetcode-cn.com/problems/longest-common-prefix/) |      |      |
+
+
 
 
 
@@ -228,6 +243,8 @@
 | [415. 字符串相加](https://leetcode-cn.com/problems/add-strings/) |      |      |
 | [43. 字符串相乘](https://leetcode-cn.com/problems/multiply-strings/) |      |      |
 | [306. 累加数](https://leetcode-cn.com/problems/additive-number/) |      |      |
+
+
 
 
 
@@ -324,10 +341,25 @@
 
 4.二进制运算的应用
 
-| 题目分类     | 题目编号               |
-| ------------ | ---------------------- |
-| 异或的应用   | 89、136、137、260、268 |
-| 与或非的应用 | 371、318、201          |
+（1）异或的应用
+
+| 题号                                                         | C++11 | Java8 |
+| ------------------------------------------------------------ | ----- | ----- |
+| 89[ 格雷编码](https://leetcode-cn.com/problems/gray-code)    |       |       |
+| 136[ 只出现一次的数字](https://leetcode-cn.com/problems/single-number) | 1     |       |
+| 137[ 只出现一次的数字 II](https://leetcode-cn.com/problems/single-number-ii) | 1     |       |
+| 260[ 只出现一次的数字 III](https://leetcode-cn.com/problems/single-number-iii) | 1     |       |
+| 268[ 丢失的数字](https://leetcode-cn.com/problems/missing-number) | 1     |       |
+
+
+
+（2）与或非的应用
+
+| 题号                                                         | C++11 | Java8 |
+| ------------------------------------------------------------ | ----- | ----- |
+| 371[ 两整数之和](https://leetcode-cn.com/problems/sum-of-two-integers) | 1     |       |
+| 318[ 最大单词长度乘积](https://leetcode-cn.com/problems/maximum-product-of-word-lengths) |       |       |
+| 201[ 2 的幂](https://leetcode-cn.com/problems/power-of-two)  | 1     |       |
 
 
 
@@ -335,13 +367,71 @@
 
 ## 04.二分查找
 
-二分查找应用(简单)	374、35、278、367、69、441
-二分查找应用(中等)	34、540、275、436、300、354、658、162、4
-二分查找与旋转数组	153、154、33、81
-二分查找与矩阵	74、240
-二分答案法	378、668、410、483
+二分查找应用(简单)	
+
+| 题号                                                         | C++11 | Java8 |
+| ------------------------------------------------------------ | ----- | ----- |
+| 374[ 猜数字大小](https://leetcode-cn.com/problems/guess-number-higher-or-lower) |       |       |
+| 35[ 搜索插入位置](https://leetcode-cn.com/problems/search-insert-position) |       |       |
+| 278[第一个错误的版本](https://leetcode-cn.com/problems/first-bad-version) |       |       |
+| 367[ 有效的完全平方数](https://leetcode-cn.com/problems/valid-perfect-square) |       |       |
+| 69[ 6 和 9 组成的最大数字](https://leetcode-cn.com/problems/maximum-69-number) | 1     |       |
+| 441[ 排列硬币](https://leetcode-cn.com/problems/arranging-coins) |       |       |
 
 
+
+
+
+二分查找应用(中等)	
+
+| 题号                                                         | C++11 | Java8 |
+| ------------------------------------------------------------ | ----- | ----- |
+| 34[ 在排序数组中查找元素的第一个和最后一个](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array) | 1     |       |
+| 540[ 有序数组中的单一元素](https://leetcode-cn.com/problems/single-element-in-a-sorted-array) |       |       |
+| 275[ H 指数 II](https://leetcode-cn.com/problems/h-index-ii) |       |       |
+| 436[ 寻找右区间](https://leetcode-cn.com/problems/find-right-interval) |       |       |
+| 300[ 最长递增子序列](https://leetcode-cn.com/problems/longest-increasing-subsequence) |       |       |
+| 354[ 俄罗斯套娃信封问题](https://leetcode-cn.com/problems/russian-doll-envelopes) |       |       |
+| 658[ 找到 K 个最接近的元素](https://leetcode-cn.com/problems/find-k-closest-elements) |       |       |
+| 162[ 寻找峰值](https://leetcode-cn.com/problems/find-peak-element) |       |       |
+| 4[寻找两个正序数组的中位数](https://leetcode-cn.com/problems/median-of-two-sorted-arrays) | 1     |       |
+
+
+
+
+
+二分查找与旋转数组	
+
+| 题号                                                         | C++11 | Java8 |
+| ------------------------------------------------------------ | ----- | ----- |
+| 153[ 寻找旋转排序数组中的最小值](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array) |       |       |
+| 154[ 寻找旋转排序数组中的最小值 II](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array-ii) |       |       |
+| 33[ 搜索旋转排序数组](https://leetcode-cn.com/problems/search-in-rotated-sorted-array) | 1     |       |
+| 81[ 搜索旋转排序数组 II](https://leetcode-cn.com/problems/search-in-rotated-sorted-array-ii) |       |       |
+
+
+
+
+
+二分查找与矩阵	
+
+| 题号                                                         | C++11 | Java8 |
+| ------------------------------------------------------------ | ----- | ----- |
+| 74[ 搜索二维矩阵](https://leetcode-cn.com/problems/search-a-2d-matrix) |       |       |
+| 240[ 搜索二维矩阵 II](https://leetcode-cn.com/problems/search-a-2d-matrix-ii) |       |       |
+
+
+
+
+
+二分答案法	
+
+| 题号                                                         | C++11 | Java8 |
+| ------------------------------------------------------------ | ----- | ----- |
+| 378[ 有序矩阵中第 K 小的元素](https://leetcode-cn.com/problems/kth-smallest-element-in-a-sorted-matrix) | 1     |       |
+| 668[ 乘法表中第k小的数](https://leetcode-cn.com/problems/kth-smallest-number-in-multiplication-table) |       |       |
+| 410[ 分割数组的最大值](https://leetcode-cn.com/problems/split-array-largest-sum) |       |       |
+| 483[ 最小好进制](https://leetcode-cn.com/problems/smallest-good-base) |       |       |
 
 
 
@@ -364,7 +454,26 @@
 
 2、同向双指针、滑动窗口	
 
-27、26、80、83、82、611、187、643、674、209、3、438、567、424、76、30
+| 题号                                                         | C++11 | Java8 |
+| ------------------------------------------------------------ | ----- | ----- |
+| 27[ 移除元素](https://leetcode-cn.com/problems/remove-element) | 1     |       |
+| 26[ 删除有序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array) | 1     |       |
+| 80[ 删除有序数组中的重复项 II](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array-ii) | 1     |       |
+| 83[ 删除排序链表中的重复元素](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list) | 1     |       |
+| 82[ 删除排序链表中的重复元素 II](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list-ii) | 1     |       |
+| 611[ 有效三角形的个数](https://leetcode-cn.com/problems/valid-triangle-number) |       |       |
+| 187[ 重复的DNA序列](https://leetcode-cn.com/problems/repeated-dna-sequences) |       |       |
+| 643[子数组最大平均数 I](https://leetcode-cn.com/problems/maximum-average-subarray-i) |       |       |
+| 674[ 最长连续递增序列](https://leetcode-cn.com/problems/longest-continuous-increasing-subsequence) |       |       |
+| 209[ 长度最小的子数组](https://leetcode-cn.com/problems/minimum-size-subarray-sum) |       |       |
+| 3[ 无重复字符的最长子串](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters) | 1     |       |
+| 438[找到字符串中所有字母异位词](https://leetcode-cn.com/problems/find-all-anagrams-in-a-string) |       |       |
+| 567[ 字符串的排列](https://leetcode-cn.com/problems/permutation-in-string) |       |       |
+| 424[ 替换后的最长重复字符](https://leetcode-cn.com/problems/longest-repeating-character-replacement) |       |       |
+| 76[ 最小覆盖子串](https://leetcode-cn.com/problems/minimum-window-substring) |       |       |
+| 30[ 串联所有单词的子串](https://leetcode-cn.com/problems/substring-with-concatenation-of-all-words) |       |       |
+
+
 
 
 
@@ -551,15 +660,57 @@
 
 （1）数组与贪心算法	
 
-605、121、122、561、455、575、135、409、621、179、56、57、228、452、435、646、406、48、169、215、75、324、517、649、678、420
+| 题号                                                         | C++11 | Java |
+| ------------------------------------------------------------ | ----- | ---- |
+| 605[ 种花问题](https://leetcode-cn.com/problems/can-place-flowers) |       |      |
+| 121[ 买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock) |       |      |
+| 122[ 买卖股票的最佳时机 II](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii) |       |      |
+| 561[ 数组拆分 I](https://leetcode-cn.com/problems/array-partition-i) |       |      |
+| 455[ 分发饼干](https://leetcode-cn.com/problems/assign-cookies) |       |      |
+| 575[ 分糖果](https://leetcode-cn.com/problems/distribute-candies) |       |      |
+| 135[ 分发糖果](https://leetcode-cn.com/problems/candy)       |       |      |
+| 409[ 最长回文串](https://leetcode-cn.com/problems/longest-palindrome) |       |      |
+| 621[ 任务调度器](https://leetcode-cn.com/problems/task-scheduler) |       |      |
+| 179[ 最大数](https://leetcode-cn.com/problems/largest-number) |       |      |
+| 56[ 合并区间](https://leetcode-cn.com/problems/merge-intervals) |       |      |
+| 57[ 插入区间](https://leetcode-cn.com/problems/insert-interval) |       |      |
+| 228[ 汇总区间](https://leetcode-cn.com/problems/summary-ranges) |       |      |
+| 452[ 用最少数量的箭引爆气球](https://leetcode-cn.com/problems/minimum-number-of-arrows-to-burst-balloons) |       |      |
+| 435[ 无重叠区间](https://leetcode-cn.com/problems/non-overlapping-intervals) |       |      |
+| 646[ 最长数对链](https://leetcode-cn.com/problems/maximum-length-of-pair-chain) |       |      |
+| 406[ 根据身高重建队列](https://leetcode-cn.com/problems/queue-reconstruction-by-height) |       |      |
+| 48[ 旋转图像](https://leetcode-cn.com/problems/rotate-image) |       |      |
+| 169[ 多数元素](https://leetcode-cn.com/problems/majority-element) |       |      |
+| 215[ 数组中的第K个最大元素](https://leetcode-cn.com/problems/kth-largest-element-in-an-array) |       |      |
+| 75[ 颜色分类](https://leetcode-cn.com/problems/sort-colors)  |       |      |
+| 324[ 摆动排序 II](https://leetcode-cn.com/problems/wiggle-sort-ii) |       |      |
+| 517[ 超级洗衣机](https://leetcode-cn.com/problems/super-washing-machines) |       |      |
+| 649[ Dota2 参议院](https://leetcode-cn.com/problems/dota2-senate)[ Dota2 参议院](https://leetcode-cn.com/problems/dota2-senate) |       |      |
+| 678[有效的括号字符串](https://leetcode-cn.com/problems/valid-parenthesis-string) |       |      |
+| 420[ 强密码检验器](https://leetcode-cn.com/problems/strong-password-checker) |       |      |
+
+
 
 （2）子数组与贪心算法	
 
-53、134、581、152
+| 题号                                                         | C++11 | Java |
+| ------------------------------------------------------------ | ----- | ---- |
+| 53[ 最大子序和](https://leetcode-cn.com/problems/maximum-subarray) |       |      |
+| 134[ 加油站](https://leetcode-cn.com/problems/gas-station)   |       |      |
+| 581[ 最短无序连续子数组](https://leetcode-cn.com/problems/shortest-unsorted-continuous-subarray) |       |      |
+| 152[ 乘积最大子数组](https://leetcode-cn.com/problems/maximum-product-subarray) |       |      |
+
+
 
 （3）子序列与贪心算法	
 
-334、376、659
+| 题号                                                         | C++11 |      |
+| ------------------------------------------------------------ | ----- | ---- |
+| 334[ 递增的三元子序列](https://leetcode-cn.com/problems/increasing-triplet-subsequence) |       |      |
+| 376[ 摆动序列](https://leetcode-cn.com/problems/wiggle-subsequence) |       |      |
+| 659[分割数组为连续子序列](https://leetcode-cn.com/problems/split-array-into-consecutive-subsequences) |       |      |
+
+
 
 
 
@@ -568,6 +719,8 @@
 | 题号                                                         |      |      |
 | ------------------------------------------------------------ | ---- | ---- |
 | [343. 整数拆分](https://leetcode-cn.com/problems/integer-break/) |      |      |
+
+
 
 
 
@@ -619,7 +772,34 @@
 
 2、树的层次遍历	
 
-102、429、690、559、662、671、513、515、637、103、107、257、623、653、104、111、112、113、129、404、199、655、116、117
+| 题号                                                         | C++11 | Java8 |
+| ------------------------------------------------------------ | ----- | ----- |
+| 102[ 二叉树的层序遍历](https://leetcode-cn.com/problems/binary-tree-level-order-traversal) | 1     |       |
+| 429[N 叉树的层序遍历](https://leetcode-cn.com/problems/n-ary-tree-level-order-traversal) |       |       |
+| 690[ 员工的重要性](https://leetcode-cn.com/problems/employee-importance) |       |       |
+| 559[ N 叉树的最大深度](https://leetcode-cn.com/problems/maximum-depth-of-n-ary-tree) | 1     |       |
+| 662[ 二叉树最大宽度](https://leetcode-cn.com/problems/maximum-width-of-binary-tree) |       |       |
+| 671[二叉树中第二小的节点](https://leetcode-cn.com/problems/second-minimum-node-in-a-binary-tree) |       |       |
+| 513[ 找树左下角的值](https://leetcode-cn.com/problems/find-bottom-left-tree-value) |       |       |
+| 515[ 在每个树行中找最大值](https://leetcode-cn.com/problems/find-largest-value-in-each-tree-row) |       |       |
+| 637[ 二叉树的层平均值](https://leetcode-cn.com/problems/average-of-levels-in-binary-tree) | 1     |       |
+| 103[ 二叉树的锯齿形层序遍历](https://leetcode-cn.com/problems/binary-tree-zigzag-level-order-traversal) |       |       |
+| 107[ 二叉树的层序遍历 II](https://leetcode-cn.com/problems/binary-tree-level-order-traversal-ii) | 1     |       |
+| 257[ 二叉树的所有路径](https://leetcode-cn.com/problems/binary-tree-paths) |       |       |
+| 623[在二叉树中增加一行](https://leetcode-cn.com/problems/add-one-row-to-tree) |       |       |
+| 653[ 两数之和 IV - 输入 BST](https://leetcode-cn.com/problems/two-sum-iv-input-is-a-bst) |       |       |
+| 104[ 二叉树的最大深度](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree) | 1     |       |
+| 111[ 二叉树的最小深度](https://leetcode-cn.com/problems/minimum-depth-of-binary-tree) |       |       |
+| 112[ 路径总和](https://leetcode-cn.com/problems/path-sum)    |       |       |
+| 113[ 路径总和 II](https://leetcode-cn.com/problems/path-sum-ii) |       |       |
+| 129[求根节点到叶节点数字之和](https://leetcode-cn.com/problems/sum-root-to-leaf-numbers) |       |       |
+| 404[左叶子之和](https://leetcode-cn.com/problems/sum-of-left-leaves) |       |       |
+| 199[ 二叉树的右视图](https://leetcode-cn.com/problems/binary-tree-right-side-view) |       |       |
+| 655[ 输出二叉树](https://leetcode-cn.com/problems/print-binary-tree) |       |       |
+| 116[ 填充每个节点的下一个右侧节点指针](https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node) |       |       |
+| 117[ 填充每个节点的下一个右侧节点指针 II](https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node-ii) |       |       |
+
+
 
 
 
@@ -655,7 +835,21 @@
 
 6、树的中序遍历与二叉搜索树	
 
-94、700、530、538、230、98、173、669、450、110、95、108、109
+| 题号                                                         | C++11 | Java8 |
+| ------------------------------------------------------------ | ----- | ----- |
+| 94[ 二叉树的中序遍历](https://leetcode-cn.com/problems/binary-tree-inorder-traversal) | 1     |       |
+| 700[ 二叉搜索树中的搜索](https://leetcode-cn.com/problems/search-in-a-binary-search-tree) | 1     |       |
+| 530[ 二叉搜索树的最小绝对差](https://leetcode-cn.com/problems/minimum-absolute-difference-in-bst) |       |       |
+| 538[ 把二叉搜索树转换为累加树](https://leetcode-cn.com/problems/convert-bst-to-greater-tree) |       |       |
+| 230[二叉搜索树中第K小的元素](https://leetcode-cn.com/problems/kth-smallest-element-in-a-bst) | 1     |       |
+| 98[验证二叉搜索树](https://leetcode-cn.com/problems/validate-binary-search-tree) | 1     |       |
+| 173[二叉搜索树迭代器](https://leetcode-cn.com/problems/binary-search-tree-iterator) |       |       |
+| 669[ 修剪二叉搜索树](https://leetcode-cn.com/problems/trim-a-binary-search-tree) |       |       |
+| 450[删除二叉搜索树中的节点](https://leetcode-cn.com/problems/delete-node-in-a-bst) |       |       |
+| 110[ 平衡二叉树](https://leetcode-cn.com/problems/balanced-binary-tree) |       |       |
+| 95[ 不同的二叉搜索树 II](https://leetcode-cn.com/problems/unique-binary-search-trees-ii) |       |       |
+| 108[ 将有序数组转换为二叉搜索树](https://leetcode-cn.com/problems/convert-sorted-array-to-binary-search-tree) |       |       |
+| 109[ 有序链表转换二叉搜索树](https://leetcode-cn.com/problems/convert-sorted-list-to-binary-search-tree) |       |       |
 
 
 
@@ -743,6 +937,8 @@
 
 
 
+
+
 （2）子数组、子序列中的动态规划	
 
 | 题目                                                         |      |      |
@@ -756,6 +952,8 @@
 
 
 
+
+
 （3）背包问题	
 
 | 题号                                                         |      |      |
@@ -765,6 +963,8 @@
 | [474. 一和零](https://leetcode-cn.com/problems/ones-and-zeroes/) |      |      |
 | [494. 目标和](https://leetcode-cn.com/problems/target-sum/)  |      |      |
 | [377. 组合总和 Ⅳ](https://leetcode-cn.com/problems/combination-sum-iv/) |      |      |
+
+
 
 
 
@@ -783,6 +983,8 @@
 | [174. 地下城游戏](https://leetcode-cn.com/problems/dungeon-game/) |      |      |
 | [96. 不同的二叉搜索树](https://leetcode-cn.com/problems/unique-binary-search-trees/) |      |      |
 | [329. 矩阵中的最长递增路径](https://leetcode-cn.com/problems/longest-increasing-path-in-a-matrix/) |      |      |
+
+
 
 
 
@@ -829,12 +1031,16 @@
 
 
 
+
+
 （8）树形dp	
 
 | 题号                                                         | 描述 | 状态 |
 | ------------------------------------------------------------ | ---- | ---- |
 | [337. 打家劫舍 III](https://leetcode-cn.com/problems/house-robber-iii/) |      |      |
 | [124. 二叉树中的最大路径和](https://leetcode-cn.com/problems/binary-tree-maximum-path-sum/) |      |      |
+
+
 
 
 
@@ -851,38 +1057,86 @@
 
 ## 12.设计数据结构（ADT）
 
+（1）设计—栈与队列	
 
-（1）设计——栈与队列	
-
-225、232、284、622、641、155
-
-
-
-（2）设计——哈希表	
-
-676、355、380、381
-
-
-
-（3）设计——哈希与双向链表	
-
-432、146、460
+| 题号                                                         | C++11 | Java8 |
+| ------------------------------------------------------------ | ----- | ----- |
+| 225[ 用队列实现栈](https://leetcode-cn.com/problems/implement-stack-using-queues) | 1     |       |
+| 232[ 用栈实现队列](https://leetcode-cn.com/problems/implement-queue-using-stacks) | 1     |       |
+| 284[ 顶端迭代器](https://leetcode-cn.com/problems/peeking-iterator) |       |       |
+| 622[ 设计循环队列](https://leetcode-cn.com/problems/design-circular-queue) |       |       |
+| 641[设计循环双端队列](https://leetcode-cn.com/problems/design-circular-deque) |       |       |
+| 155[ 最小栈](https://leetcode-cn.com/problems/min-stack)     | 1     |       |
 
 
 
-（4）前缀树	
-
-208、211、648、386、677、472、421、212、336、440
 
 
+（2）设计—哈希表	
 
-（5）堆	
+| 题号                                                         | C++11 | Java8 |
+| ------------------------------------------------------------ | ----- | ----- |
+| 676[ 实现一个魔法字典](https://leetcode-cn.com/problems/implement-magic-dictionary) |       |       |
+| 355[ 设计推特](https://leetcode-cn.com/problems/design-twitter) |       |       |
+| 380[ O(1) 时间插入、删除和获取随机元素](https://leetcode-cn.com/problems/insert-delete-getrandom-o1) |       |       |
+| 381[O(1) 时间插入、删除和获取随机元素 - 允](https://leetcode-cn.com/problems/insert-delete-getrandom-o1-duplicates-allowed) |       |       |
 
-23、373、378、632、347、692、502、630、407、295、480
 
 
 
-（6）树状数组	
+
+（3）设计—哈希与双向链表	
+
+| 题号                                                         | C++11 | Java8 |
+| ------------------------------------------------------------ | ----- | ----- |
+| 432[ 全 O(1) 的数据结构](https://leetcode-cn.com/problems/all-oone-data-structure) |       |       |
+| 146[ LRU 缓存机制](https://leetcode-cn.com/problems/lru-cache) | 1     |       |
+| 460[ LFU 缓存](https://leetcode-cn.com/problems/lfu-cache)   |       |       |
+
+
+
+
+
+（4）设计—前缀树	
+
+| 题号                                                         | C++11 | Java8 |
+| ------------------------------------------------------------ | ----- | ----- |
+| 208[ 实现 Trie (前缀树)](https://leetcode-cn.com/problems/implement-trie-prefix-tree) | 1     |       |
+| 211[ 添加与搜索单词 - 数据结构设计](https://leetcode-cn.com/problems/design-add-and-search-words-data-structure) |       |       |
+| 648[ 单词替换](https://leetcode-cn.com/problems/replace-words) |       |       |
+| 386[ 字典序排数](https://leetcode-cn.com/problems/lexicographical-numbers) |       |       |
+| 677[ 键值映射](https://leetcode-cn.com/problems/map-sum-pairs) |       |       |
+| 472[ 连接词](https://leetcode-cn.com/problems/concatenated-words) |       |       |
+| 421[ 数组中两个数的最大异或值](https://leetcode-cn.com/problems/maximum-xor-of-two-numbers-in-an-array) |       |       |
+| 212[ 单词搜索 II](https://leetcode-cn.com/problems/word-search-ii) |       |       |
+| 336[ 回文对](https://leetcode-cn.com/problems/palindrome-pairs) |       |       |
+| 440[字典序的第K小数字](https://leetcode-cn.com/problems/k-th-smallest-in-lexicographical-order) |       |       |
+
+
+
+
+
+（5）设计—堆	
+
+| 题号                                                         | C++11 | Java8 |
+| ------------------------------------------------------------ | ----- | ----- |
+| 23[ 合并K个升序链表](https://leetcode-cn.com/problems/merge-k-sorted-lists) | 1     |       |
+| 373[ 查找和最小的K对数字](https://leetcode-cn.com/problems/find-k-pairs-with-smallest-sums) |       |       |
+| 378[ 有序矩阵中第 K 小的元素](https://leetcode-cn.com/problems/kth-smallest-element-in-a-sorted-matrix) |       |       |
+| 632[ 最小区间](https://leetcode-cn.com/problems/smallest-range-covering-elements-from-k-lists) |       |       |
+| 347[ 前 K 个高频元素](https://leetcode-cn.com/problems/top-k-frequent-elements) | 1     |       |
+| 692[ 前K个高频单词](https://leetcode-cn.com/problems/top-k-frequent-words) |       |       |
+| 502[ IPO](https://leetcode-cn.com/problems/ipo)              |       |       |
+| 630[ 课程表 III](https://leetcode-cn.com/problems/course-schedule-iii) |       |       |
+| 407[ 接雨水 II](https://leetcode-cn.com/problems/trapping-rain-water-ii) |       |       |
+| 295[ 数据流的中位数](https://leetcode-cn.com/problems/find-median-from-data-stream) |       |       |
+| 480[滑动窗口中位数](https://leetcode-cn.com/problems/sliding-window-median) |       |       |
+
+
+
+
+
+（6）设计—树状数组	
 
 | 题号                                                         | 描述 | 状态 |
 | ------------------------------------------------------------ | ---- | ---- |
@@ -894,11 +1148,15 @@
 
 
 
+
+
 （7）线段树	
 
 | 题号                                                         |      |      |
 | ------------------------------------------------------------ | ---- | ---- |
 | [699. 掉落的方块](https://leetcode-cn.com/problems/falling-squares/) |      |      |
+
+
 
 
 
@@ -914,19 +1172,141 @@
 
 
 
+
+
 ## 13.图与搜索
 
-题目分类	题目编号
-图的建立与应用	565
-深度优先搜索	17、397
-回溯法	526、401、36、37、51、52、77、39、216、40、46、47、31、556、60、491、78、90、79、93、332
-回溯法与表达式	241、282、679
-回溯法与括号	22、301
-回溯法与贪心	488
-广度优先搜索	133、200、695、463、542、130、417、529、127、126、433、675
-并查集	547、684、685
-拓扑排序	399、207、210
-有限状态自动机	65、468
+
+
+13.1图的建立与应用	
+
+| 题号                                                         | C++11 | Java8 |
+| ------------------------------------------------------------ | ----- | ----- |
+| 565[ 数组嵌套](https://leetcode-cn.com/problems/array-nesting) |       |       |
+
+
+
+13.2.深度优先搜索	
+
+| 题号                                                         | C++11 | Java8 |
+| ------------------------------------------------------------ | ----- | ----- |
+| 17[ 电话号码的字母组合](https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number) |       |       |
+| 397[ 整数替换](https://leetcode-cn.com/problems/integer-replacement) | 1     |       |
+
+
+
+13.3回溯法	
+
+
+
+| 题号                                                         | C++11 | Java8 |
+| ------------------------------------------------------------ | ----- | ----- |
+| 526[ 优美的排列](https://leetcode-cn.com/problems/beautiful-arrangement) |       |       |
+| 401[二进制手表](https://leetcode-cn.com/problems/binary-watch) |       |       |
+| 36[ 有效的数独](https://leetcode-cn.com/problems/valid-sudoku) |       |       |
+| 37[ 解数独](https://leetcode-cn.com/problems/sudoku-solver)  |       |       |
+| 51[ N 皇后](https://leetcode-cn.com/problems/n-queens)       |       |       |
+| 52[ N皇后 II](https://leetcode-cn.com/problems/n-queens-ii)  |       |       |
+| 77[ 组合](https://leetcode-cn.com/problems/combinations)     | 1     |       |
+| 39[ 组合总和](https://leetcode-cn.com/problems/combination-sum) |       |       |
+| 216[ 组合总和 III](https://leetcode-cn.com/problems/combination-sum-iii) |       |       |
+| 40[ 组合总和 II](https://leetcode-cn.com/problems/combination-sum-ii) |       |       |
+| 46[ 全排列](https://leetcode-cn.com/problems/permutations)   | 1     |       |
+| 47[ 全排列 II](https://leetcode-cn.com/problems/permutations-ii) |       |       |
+| 31[ 下一个排列](https://leetcode-cn.com/problems/next-permutation) | 1     |       |
+| 556[ 下一个更大元素 III](https://leetcode-cn.com/problems/next-greater-element-iii) |       |       |
+| 60[ 排列序列](https://leetcode-cn.com/problems/permutation-sequence) | 1     |       |
+| 491[递增子序列](https://leetcode-cn.com/problems/increasing-subsequences) |       |       |
+| 78[ 子集](https://leetcode-cn.com/problems/subsets)          |       |       |
+| 90[子集 II](https://leetcode-cn.com/problems/subsets-ii)     |       |       |
+| 79[ 单词搜索](https://leetcode-cn.com/problems/word-search)  |       |       |
+| 93[ 复原 IP 地址](https://leetcode-cn.com/problems/restore-ip-addresses) |       |       |
+| 332[ 重新安排行程](https://leetcode-cn.com/problems/reconstruct-itinerary) |       |       |
+
+
+
+
+
+13.4.回溯法与表达式	
+
+| 题号                                                         | C++11 | Java8 |
+| ------------------------------------------------------------ | ----- | ----- |
+| 241[ 为运算表达式设计优先级](https://leetcode-cn.com/problems/different-ways-to-add-parentheses) |       |       |
+| 282[ 给表达式添加运算符](https://leetcode-cn.com/problems/expression-add-operators) |       |       |
+| 679[ 24 点游戏](https://leetcode-cn.com/problems/24-game)    |       |       |
+
+
+
+13.5.回溯法与括号	
+
+| 题号                                                         | C++11 | Java8 |
+| ------------------------------------------------------------ | ----- | ----- |
+| 22[ 括号生成](https://leetcode-cn.com/problems/generate-parentheses) |       |       |
+| 301[ 删除无效的括号](https://leetcode-cn.com/problems/remove-invalid-parentheses) |       |       |
+
+
+
+13.6.回溯法与贪心	
+
+| 题号                                                       | C++11 | Java8 |
+| ---------------------------------------------------------- | ----- | ----- |
+| 488[ 祖玛游戏](https://leetcode-cn.com/problems/zuma-game) |       |       |
+
+
+
+
+
+13.7.广度优先搜索	
+
+| 题号                                                         | C++11 | Java8 |
+| ------------------------------------------------------------ | ----- | ----- |
+| 133[ 克隆图](https://leetcode-cn.com/problems/clone-graph)   |       |       |
+| 200[ 岛屿数量](https://leetcode-cn.com/problems/number-of-islands) |       |       |
+| 695[ 岛屿的最大面积](https://leetcode-cn.com/problems/max-area-of-island) |       |       |
+| 463[ 岛屿的周长](https://leetcode-cn.com/problems/island-perimeter) |       |       |
+| 542[ 01 矩阵](https://leetcode-cn.com/problems/01-matrix)    |       |       |
+| 130[ 被围绕的区域](https://leetcode-cn.com/problems/surrounded-regions) |       |       |
+| 417[太平洋大西洋水流问题](https://leetcode-cn.com/problems/pacific-atlantic-water-flow) |       |       |
+| 529[ 扫雷游戏](https://leetcode-cn.com/problems/minesweeper) |       |       |
+| 127[ 单词接龙](https://leetcode-cn.com/problems/word-ladder) |       |       |
+| 126[ 单词接龙 II](https://leetcode-cn.com/problems/word-ladder-ii) |       |       |
+| 433[最小基因变化](https://leetcode-cn.com/problems/minimum-genetic-mutation) |       |       |
+| 675[ 为高尔夫比赛砍树](https://leetcode-cn.com/problems/cut-off-trees-for-golf-event) |       |       |
+
+
+
+
+
+13.8.并查集	
+
+| 题号                                                         | C++11 | Java8 |
+| ------------------------------------------------------------ | ----- | ----- |
+| 547[ 省份数量](https://leetcode-cn.com/problems/number-of-provinces) |       |       |
+| 684[ 冗余连接](https://leetcode-cn.com/problems/redundant-connection) |       |       |
+| 685[ 冗余连接 II](https://leetcode-cn.com/problems/redundant-connection-ii) |       |       |
+
+
+
+
+
+13.9.拓扑排序	
+
+| 题号                                                         | C++11 | Java8 |
+| ------------------------------------------------------------ | ----- | ----- |
+| 399[ 除法求值](https://leetcode-cn.com/problems/evaluate-division) |       |       |
+| 207[课程表](https://leetcode-cn.com/problems/course-schedule) |       |       |
+| 210[ 课程表 II](https://leetcode-cn.com/problems/course-schedule-ii) |       |       |
+
+
+
+13.10.有限状态自动机	
+
+| 题号                                                         | C++11 | Java8 |
+| ------------------------------------------------------------ | ----- | ----- |
+| 65[ 有效数字](https://leetcode-cn.com/problems/valid-number) |       |       |
+| 468[ 验证IP地址](https://leetcode-cn.com/problems/validate-ip-address) |       |       |
+
+
 
 
 
@@ -938,11 +1318,39 @@
 
 （1）采样
 
-| 题目分类   | 题目编号      |
-| ---------- | ------------- |
-| 按权值采样 | 528、497      |
-| 蓄水池抽样 | 382、398      |
-| 拒绝采样   | 470、478、519 |
+按权值采样
+
+| 题号                                                         | C++11 | Java8 |
+| ------------------------------------------------------------ | ----- | ----- |
+| 528[ 按权重随机选择](https://leetcode-cn.com/problems/random-pick-with-weight) |       |       |
+| 497[ 非重叠矩形中的随机点](https://leetcode-cn.com/problems/random-point-in-non-overlapping-rectangles) |       |       |
+
+
+
+蓄水池抽样
+
+| 题号                                                         | C++11 | Java8 |
+| ------------------------------------------------------------ | ----- | ----- |
+| 382[ 链表随机节点](https://leetcode-cn.com/problems/linked-list-random-node) |       |       |
+| 398[ 随机数索引](https://leetcode-cn.com/problems/random-pick-index) |       |       |
+
+
+
+拒绝采样
+
+| 题目分类                                                     | C++11 | Java8 |
+| ------------------------------------------------------------ | ----- | ----- |
+| 470[ 用 Rand7() 实现 Rand10()](https://leetcode-cn.com/problems/implement-rand10-using-rand7) |       |       |
+| 478[ 在圆内随机生成点](https://leetcode-cn.com/problems/generate-random-point-in-a-circle) |       |       |
+| 519[ 随机翻转矩阵](https://leetcode-cn.com/problems/random-flip-matrix) |       |       |
+
+
+
+
+
+
+
+
 
 
 
@@ -950,18 +1358,54 @@
 
 （2）**计算几何**
 
-| 题目分类     | 题目编号           |
-| ------------ | ------------------ |
-| 计算几何基础 | 593、447、223、149 |
-| 分类讨论法   | 335                |
-| 凸包         | 587                |
-| 覆盖问题     | 391                |
+计算几何基础
+
+| 题号                                                         | C++11 | Java8 |
+| ------------------------------------------------------------ | ----- | ----- |
+| 593[ 有效的正方形](https://leetcode-cn.com/problems/valid-square) |       |       |
+| 447[ 回旋镖的数量](https://leetcode-cn.com/problems/number-of-boomerangs) |       |       |
+| 223[ 矩形面积](https://leetcode-cn.com/problems/rectangle-area) |       |       |
+| 149[ 直线上最多的点数](https://leetcode-cn.com/problems/max-points-on-a-line) |       |       |
+
+
+
+分类讨论法
+
+| 题号                                                         | C++11 | Java8 |
+| ------------------------------------------------------------ | ----- | ----- |
+| 335[ 路径交叉](https://leetcode-cn.com/problems/self-crossing) |       |       |
+
+
+
+凸包
+
+| 题号                                                         | C++11 | Java8 |
+| ------------------------------------------------------------ | ----- | ----- |
+| 587[ 安装栅栏](https://leetcode-cn.com/problems/erect-the-fence) |       |       |
+
+
+
+覆盖问题
+
+| 题号                                                         | C++11 | Java8 |
+| ------------------------------------------------------------ | ----- | ----- |
+| 391[ 完美矩形](https://leetcode-cn.com/problems/perfect-rectangle) |       |       |
+
+
+
+
+
+
+
+
 
 
 
 
 
 ## 15.常用技巧与算法
+
+
 
 ### （1）博弈论	
 
@@ -982,11 +1426,15 @@
 
 
 
+
+
 ### （3）倍增法	
 
 | 题号                                                         | 描述 | 状态 |
 | ------------------------------------------------------------ | ---- | ---- |
 | [330. 按要求补齐数组](https://leetcode-cn.com/problems/patching-array/) |      |      |
+
+
 
 
 
@@ -1041,8 +1489,48 @@
 
 
 
+
+
 ### （10）摩尔投票法	
 
 | 题号                                                         |      |      |
 | ------------------------------------------------------------ | ---- | ---- |
 | [229. 求众数 II](https://leetcode-cn.com/problems/majority-element-ii/) |      |      |
+
+
+
+
+
+## License
+
+本仓库的部分内容引用书上/技术文档/网上文字（这部分内容在文中标明了出处），其余均是作者原创。  
+在您引用本仓库内容或者对内容进行修改演绎时，请署名并以相同方式共享，谢谢。:smile:  
+转载文章请在开头明显处标明该页面地址      
+
+
+
+## 致谢
+
+如果你希望被添加到这个名单中，并且提交过 Issue / PR / email，请与我联系
+
+:email: hacvhacv@qq.com  
+
+感谢以下人员对本仓库做出的贡献
+
+<a href="https://github.com/petering">
+    <img src="https://avatars.githubusercontent.com/u/59276424?v=4" width="50px">
+</a>
+
+<a href="https://github.com/xeknrc">
+    <img src="https://avatars.githubusercontent.com/u/34732287?v=4" width="50px">
+</a>
+
+
+
+
+
+## 参考资料
+
+>刷题目录参考自：noone_：https://leetcode-cn.com/circle/article/48kq9d/\
+
+- 笔者对其进行了改进，并且给其加上链接
