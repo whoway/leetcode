@@ -1,8 +1,8 @@
 # leetcode题解
 
+
+
 > 本项目『[网页版](https://hacv.github.io/leetcode/)』
-
-
 
 - C++11版
 - Java8版
@@ -15,20 +15,20 @@
 
 
 
+
+
 ## 刷题顺序
-
-
 
 ## 01.数组
 
 1.1.数组的遍历
 
-| 题号                                                         | C++11 | Java8 |
-| ------------------------------------------------------------ | ----- | ----- |
-| [485. 最大连续1的个数](https://leetcode-cn.com/problems/max-consecutive-ones/) | 1     |       |
-| [495. 提莫攻击](https://leetcode-cn.com/problems/teemo-attacking/) | 1     |       |
-| [414. 第三大的数](https://leetcode-cn.com/problems/third-maximum-number/) | 1     |       |
-| [628. 三个数的最大乘积](https://leetcode-cn.com/problems/maximum-product-of-three-numbers/) | 1     |       |
+| 题号                                                         | C++11 | Java8 | Scala | Python3 | Go   |
+| ------------------------------------------------------------ | ----- | ----- | ----- | ------- | ---- |
+| [485. 最大连续1的个数](https://leetcode-cn.com/problems/max-consecutive-ones/) | 1     |       |       |         |      |
+| [495. 提莫攻击](https://leetcode-cn.com/problems/teemo-attacking/) | 1     |       |       |         |      |
+| [414. 第三大的数](https://leetcode-cn.com/problems/third-maximum-number/) | 1     |       |       |         |      |
+| [628. 三个数的最大乘积](https://leetcode-cn.com/problems/maximum-product-of-three-numbers/) | 1     |       |       |         |      |
 
 
 
@@ -36,14 +36,14 @@
 
 1.2.统计数组中的元素
 
-| 题号                                                         | C++11 | Java8 |
-| ------------------------------------------------------------ | ----- | ----- |
-| [645. 错误的集合](https://leetcode-cn.com/problems/set-mismatch/) | 1     |       |
-| [697. 数组的度](https://leetcode-cn.com/problems/degree-of-an-array/) |       |       |
-| [448. 找到所有数组中消失的数字](https://leetcode-cn.com/problems/find-all-numbers-disappeared-in-an-array/) | 1     |       |
-| [442. 数组中重复的数据](https://leetcode-cn.com/problems/find-all-duplicates-in-an-array/) |       |       |
-| [41. 缺失的第一个正数](https://leetcode-cn.com/problems/first-missing-positive/) |       |       |
-| [274. H 指数](https://leetcode-cn.com/problems/h-index/)     |       |       |
+| 题号                                                         | C++11 | Java8 |      |      |      |
+| ------------------------------------------------------------ | ----- | ----- | ---- | ---- | ---- |
+| [645. 错误的集合](https://leetcode-cn.com/problems/set-mismatch/) | 1     |       |      |      |      |
+| [697. 数组的度](https://leetcode-cn.com/problems/degree-of-an-array/) |       |       |      |      |      |
+| [448. 找到所有数组中消失的数字](https://leetcode-cn.com/problems/find-all-numbers-disappeared-in-an-array/) | 1     |       |      |      |      |
+| [442. 数组中重复的数据](https://leetcode-cn.com/problems/find-all-duplicates-in-an-array/) |       |       |      |      |      |
+| [41. 缺失的第一个正数](https://leetcode-cn.com/problems/first-missing-positive/) |       |       |      |      |      |
+| [274. H 指数](https://leetcode-cn.com/problems/h-index/)     |       |       |      |      |      |
 
 
 
@@ -90,11 +90,11 @@
 
 1.6.特定顺序遍历二维数组
 
-| 题号                                                         | 描述 | 完成状态 |
-| ------------------------------------------------------------ | ---- | -------- |
-| [54. 螺旋矩阵](https://leetcode-cn.com/problems/spiral-matrix/) |      |          |
-| [59. 螺旋矩阵 II](https://leetcode-cn.com/problems/spiral-matrix-ii/) |      |          |
-| [498. 对角线遍历](https://leetcode-cn.com/problems/diagonal-traverse/) |      |          |
+| 题号                                                         | C++11 | 完成状态 |
+| ------------------------------------------------------------ | ----- | -------- |
+| [54. 螺旋矩阵](https://leetcode-cn.com/problems/spiral-matrix/) |       |          |
+| [59. 螺旋矩阵 II](https://leetcode-cn.com/problems/spiral-matrix-ii/) |       |          |
+| [498. 对角线遍历](https://leetcode-cn.com/problems/diagonal-traverse/) |       |          |
 
 
 
@@ -439,16 +439,16 @@
 
 1、头尾指针	
 
-| 题号                                                         | 描述 | 状态 |
-| ------------------------------------------------------------ | ---- | ---- |
-| [345. 反转字符串中的元音字母](https://leetcode-cn.com/problems/reverse-vowels-of-a-string/) |      |      |
-| [680. 验证回文字符串 Ⅱ](https://leetcode-cn.com/problems/valid-palindrome-ii/) |      |      |
-| [167. 两数之和 II - 输入有序数组](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/) |      |      |
-| [15. 三数之和](https://leetcode-cn.com/problems/3sum/)       |      |      |
-| [16. 最接近的三数之和](https://leetcode-cn.com/problems/3sum-closest/) |      |      |
-| [18. 四数之和](https://leetcode-cn.com/problems/4sum/)       |      |      |
-| [11. 盛最多水的容器](https://leetcode-cn.com/problems/container-with-most-water/) |      |      |
-| [42. 接雨水](https://leetcode-cn.com/problems/trapping-rain-water/) |      |      |
+| 题号                                                         | C++11 | Java8 |
+| ------------------------------------------------------------ | ----- | ----- |
+| [345. 反转字符串中的元音字母](https://leetcode-cn.com/problems/reverse-vowels-of-a-string/) | 1     |       |
+| [680. 验证回文字符串 Ⅱ](https://leetcode-cn.com/problems/valid-palindrome-ii/) |       |       |
+| [167. 两数之和 II - 输入有序数组](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/) | 1     |       |
+| [15. 三数之和](https://leetcode-cn.com/problems/3sum/)       |       |       |
+| [16. 最接近的三数之和](https://leetcode-cn.com/problems/3sum-closest/) |       |       |
+| [18. 四数之和](https://leetcode-cn.com/problems/4sum/)       |       |       |
+| [11. 盛最多水的容器](https://leetcode-cn.com/problems/container-with-most-water/) |       |       |
+| [42. 接雨水](https://leetcode-cn.com/problems/trapping-rain-water/) |       |       |
 
 
 
@@ -479,13 +479,13 @@
 
 3、分段双指针	
 
-| 题号                                                         | 描述                 | 状态 |
-| ------------------------------------------------------------ | -------------------- | ---- |
-| [86. 分隔链表](https://leetcode-cn.com/problems/partition-list/) |                      |      |
-| [328. 奇偶链表](https://leetcode-cn.com/problems/odd-even-linked-list/) |                      |      |
-| [160. 相交链表](https://leetcode-cn.com/problems/intersection-of-two-linked-lists/) |                      |      |
-| [88. 合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/) | 想起秋招难受（重点） |      |
-| [475. 供暖器](https://leetcode-cn.com/problems/heaters/)     |                      |      |
+| 题号                                                         | C++11    | Java8 |
+| ------------------------------------------------------------ | -------- | ----- |
+| [86. 分隔链表](https://leetcode-cn.com/problems/partition-list/) |          |       |
+| [328. 奇偶链表](https://leetcode-cn.com/problems/odd-even-linked-list/) |          |       |
+| [160. 相交链表](https://leetcode-cn.com/problems/intersection-of-two-linked-lists/) |          |       |
+| [88. 合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/) | 秋招考过 |       |
+| [475. 供暖器](https://leetcode-cn.com/problems/heaters/)     |          |       |
 
 
 
@@ -622,13 +622,13 @@
 
 （2）哈希表与索引	
 
-| 题号                                                         | 描述 | 状态 |
-| ------------------------------------------------------------ | ---- | ---- |
-| [1. 两数之和](https://leetcode-cn.com/problems/two-sum/)     |      |      |
-| [167. 两数之和 II - 输入有序数组](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/) |      |      |
-| [599. 两个列表的最小索引总和](https://leetcode-cn.com/problems/minimum-index-sum-of-two-lists/) |      |      |
-| [219. 存在重复元素 II](https://leetcode-cn.com/problems/contains-duplicate-ii/) |      |      |
-| [220. 存在重复元素 III](https://leetcode-cn.com/problems/contains-duplicate-iii/) |      |      |
+| 题号                                                         | C++11 | 状态 |
+| ------------------------------------------------------------ | ----- | ---- |
+| [1. 两数之和](https://leetcode-cn.com/problems/two-sum/)     | 1     |      |
+| [167. 两数之和 II - 输入有序数组](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/) | 1     |      |
+| [599. 两个列表的最小索引总和](https://leetcode-cn.com/problems/minimum-index-sum-of-two-lists/) |       |      |
+| [219. 存在重复元素 II](https://leetcode-cn.com/problems/contains-duplicate-ii/) |       |      |
+| [220. 存在重复元素 III](https://leetcode-cn.com/problems/contains-duplicate-iii/) |       |      |
 
 
 
@@ -647,11 +647,11 @@
 
 （4）哈希表与前缀和	
 
-| 题号                                                         | 描述 | 状态 |
-| ------------------------------------------------------------ | ---- | ---- |
-| [560. 和为K的子数组](https://leetcode-cn.com/problems/subarray-sum-equals-k/) |      |      |
-| [523. 连续的子数组和](https://leetcode-cn.com/problems/continuous-subarray-sum/) |      |      |
-| [525. 连续数组](https://leetcode-cn.com/problems/contiguous-array/) |      |      |
+| 题号                                                         | C++11 | Java8 |
+| ------------------------------------------------------------ | ----- | ----- |
+| [560. 和为K的子数组](https://leetcode-cn.com/problems/subarray-sum-equals-k/) | 1     |       |
+| [523. 连续的子数组和](https://leetcode-cn.com/problems/continuous-subarray-sum/) |       |       |
+| [525. 连续数组](https://leetcode-cn.com/problems/contiguous-array/) |       |       |
 
 
 

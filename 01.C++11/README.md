@@ -301,3 +301,150 @@ public:
     }
 };
 ```
+
+
+
+
+
+## 05.双指针法
+
+#### 1、头尾指针
+
+[345. 反转字符串中的元音字母](https://leetcode-cn.com/problems/reverse-vowels-of-a-string/)
+
+- (1)难以复现的bug
+
+```cpp
+
+map<char,int> mp;
+void init()
+{
+    mp['a']=1;
+    mp['e']=1;
+    mp['i']=1;
+    mp['o']=1;
+    mp['u']=1;
+
+    mp['A']=1;
+    mp['E']=1;
+    mp['I']=1;
+    mp['O']=1;
+    mp['U']=1;
+}
+
+class Solution {
+public:
+    string reverseVowels(string s) {
+        init();
+        if( s.size()<=1 )
+        {
+            return s;
+        }
+
+        int L=0;
+        int R=s.size()-1;
+        //出差的地方：会导致"qq"这样的样例出错！
+        while( 0==mp[ s[L] ] && L<s.size() )
+        {
+            ++L;
+        }
+
+        while( 0==mp[ s[R]] && R>=0 )
+        {
+            --R;
+        }
+
+        while( L<R )
+        {
+            swap( s[L], s[R] );
+            ++L;
+            --R;
+
+            while( 0==mp[ s[L] ] && L<s.size() )
+            {
+                ++L;
+            }
+
+            while( 0==mp[ s[R]] && R>=0 )
+            {
+                --R;
+            }
+        }
+
+        return s;
+
+    }
+};
+```
+
+
+
+- （2）AC的代码
+
+```cpp
+map<char,int> mp;
+void init()
+{
+    mp['a']=1;
+    mp['e']=1;
+    mp['i']=1;
+    mp['o']=1;
+    mp['u']=1;
+
+    mp['A']=1;
+    mp['E']=1;
+    mp['I']=1;
+    mp['O']=1;
+    mp['U']=1;
+}
+
+class Solution {
+public:
+    string reverseVowels(string s) {
+        mp.clear();
+        init();
+        if( s.size()<=1 )
+        {
+            return s;
+        }
+
+        int L=0;
+        int R=s.size()-1;
+        // L<s.size() && 0==mp[ s[L] ] 
+        //这2个一定不能互换前后！！！
+        while( L<s.size() && 0==mp[ s[L] ]   )
+        {
+            ++L;
+        }
+
+        while( R>=0 && 0==mp[ s[R]]   )
+        {
+            --R;
+        }
+
+        while( L<R )
+        {
+            swap( s[L], s[R] );
+            ++L;
+            --R;
+            while( L<s.size() && 0==mp[ s[L] ]   )
+            {
+                ++L;
+            }
+
+            while( R>=0 && 0==mp[ s[R]]   )
+            {
+                --R;
+            }
+        }
+
+        return s;
+
+    }
+};
+```
+
+
+
+
+
