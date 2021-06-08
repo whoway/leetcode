@@ -12,7 +12,7 @@
 
 
 
-1、STL的堆
+简单遍历，内存开销大
 
 ```python3
 class Solution(object):
@@ -28,9 +28,4 @@ class Solution(object):
             if(count>=countmax):
                 countmax=count
         return countmax
-
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
 ```
