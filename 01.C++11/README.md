@@ -300,6 +300,126 @@ public:
 
 
 
+### 1.6.特定顺序遍历二维数组
+
+#### ⭐️[54. 螺旋矩阵](https://leetcode-cn.com/problems/spiral-matrix/)
+
+```cpp
+class Solution {
+public:
+    vector<int> spiralOrder(vector<vector<int>>& matrix) {
+        vector<int> res;
+        if( 0==matrix.size() ) 
+        {
+            return res;
+        }
+        
+        //左上和右下2个点确定一个矩形
+        int LeftUpRow=0,LeftUpCol=0;
+        int RightDownRow=matrix.size()-1,RightDownCol=matrix[0].size()-1;
+
+        //开始『减而治之』的遍历
+        while( LeftUpRow<=RightDownRow && LeftUpCol<=RightDownCol )
+        {
+            for(int loop=LeftUpCol; loop<=RightDownCol; ++loop)
+            {
+                res.push_back( matrix[LeftUpRow][loop] );
+            }
+            ++LeftUpRow;//遍历完一行之后，将左上角的点移动位置『减而治之』
+            
+            //易错点，注意这样的样例：[ [2,4] ]
+            if( LeftUpRow>RightDownRow || LeftUpCol>RightDownCol ) break;
+            for(int loop=LeftUpRow; loop<=RightDownRow; ++loop)
+            {
+                res.push_back( matrix[loop][RightDownCol] );
+            }
+            --RightDownCol;
+             
+            if( LeftUpRow>RightDownRow || LeftUpCol>RightDownCol ) break;
+            for(int loop=RightDownCol; loop>=LeftUpCol; --loop)
+            {
+                res.push_back( matrix[RightDownRow][loop] );
+            }
+            --RightDownRow;
+
+            if( LeftUpRow>RightDownRow || LeftUpCol>RightDownCol ) break;
+            for(int loop=RightDownRow; loop>=LeftUpRow; --loop)
+            {
+                res.push_back( matrix[loop][LeftUpCol] );
+            }
+            ++LeftUpCol;
+        }
+
+        return res;
+    }
+};
+```
+
+
+
+#### ⭐️[59. 螺旋矩阵 II](https://leetcode-cn.com/problems/spiral-matrix-ii/)
+
+- 是上一道题的影子题，上一道是读取，这一道是写入
+- 记忆技巧：`vector< vector<int> >  solve( 3 , vector<int>(4) );  //初始化solve，行为3，列为4`
+
+```cpp
+class Solution {
+public:
+    vector<vector<int>> generateMatrix(int n) {
+        
+        vector< vector<int> > matrix( n, vector<int>(n) );
+        if( 0==n )
+        {
+            return matrix;
+        }
+
+        int curNum=1;
+        //左上和右下2个点确定一个矩形
+        int LeftUpRow=0,LeftUpCol=0;
+        int RightDownRow=n-1,RightDownCol=n-1;
+
+        //开始『减而治之』的遍历
+        while( LeftUpRow<=RightDownRow && LeftUpCol<=RightDownCol )
+        {
+            for(int loop=LeftUpCol; loop<=RightDownCol; ++loop)
+            {
+                matrix[LeftUpRow][loop]=curNum;
+                ++curNum;
+            }
+            ++LeftUpRow;//遍历完一行之后，将左上角的点移动位置『减而治之』
+             
+            if( LeftUpRow>RightDownRow || LeftUpCol>RightDownCol ) break;
+            for(int loop=LeftUpRow; loop<=RightDownRow; ++loop)
+            {
+                matrix[loop][RightDownCol]=curNum;
+                ++curNum;
+            }
+            --RightDownCol;
+             
+            if( LeftUpRow>RightDownRow || LeftUpCol>RightDownCol ) break;
+            for(int loop=RightDownCol; loop>=LeftUpCol; --loop)
+            {
+                matrix[RightDownRow][loop]=curNum;
+                ++curNum;
+            }
+            --RightDownRow;
+
+            if( LeftUpRow>RightDownRow || LeftUpCol>RightDownCol ) break;
+            for(int loop=RightDownRow; loop>=LeftUpRow; --loop)
+            {
+                matrix[loop][LeftUpCol]=curNum;
+                ++curNum;
+            }
+            ++LeftUpCol;
+        }
+
+        return matrix;
+    }
+};
+```
+
+
+
 
 
 ## 02.字符串
@@ -379,6 +499,317 @@ public:
 ```
 
 
+
+
+
+
+
+### 2.6.字符的统计
+
+#### 💦[387. 字符串中的第一个唯一字符](https://leetcode-cn.com/problems/first-unique-character-in-a-string/)
+
+```cpp
+class Solution {
+public:
+    int firstUniqChar(string s) {
+        
+
+        int len=s.size();
+        if( len<=0 )
+        {
+            return -1;
+        }
+
+        int ret=-1;
+        unordered_map<char,int> mp;
+        for(char  c: s )
+        {
+            mp[c]++;
+        }
+
+        for( int i=0; i<len; ++i )
+        {
+            if( 1==mp[ s[i] ] )
+            {
+                ret=i;
+                break;
+            }
+        }
+
+        return ret;
+    }
+};
+```
+
+
+
+
+
+#### 💦[389. 找不同](https://leetcode-cn.com/problems/find-the-difference/)
+
+```cpp
+class Solution {
+public:
+    char findTheDifference(string s, string t) {
+        int hashFirst[26]={0};
+        int hashSecond[26]={0};
+        for( auto c : s )
+        {
+            hashFirst[ c-'a' ]++;
+        }
+
+        for( auto c : t )
+        {
+            hashSecond[ c-'a' ]++;
+        }
+
+        for(int i=0; i<26; ++i)
+        {
+            if( hashSecond[i]>hashFirst[i] )
+            {
+                return i+'a';
+            }
+        }
+
+        //给编译器吃的
+        return '-';
+    }
+};
+```
+
+
+
+#### 💦[383. 赎金信](https://leetcode-cn.com/problems/ransom-note/)
+
+```cpp
+class Solution {
+public:
+    bool canConstruct(string ransomNote, string magazine) {
+        int hashFirst[26]={0};
+        int hashSecond[26]={0};
+        for( auto c : ransomNote )
+        {
+            hashFirst[c-'a']++;
+        }
+
+        for( auto c : magazine )
+        {
+            hashSecond[c-'a']++;
+        }
+
+        for(int i=0; i<26; ++i)
+        {
+            if( hashFirst[i]>hashSecond[i] ) 
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+};
+```
+
+
+
+#### 💦[242. 有效的字母异位词](https://leetcode-cn.com/problems/valid-anagram/)
+
+```cpp
+class Solution {
+public:
+    bool isAnagram(string s, string t) {
+        int Ahash[256]={0};
+        int Bhash[256]={0};
+
+        for( char c : s)
+        {
+            Ahash[c]++;
+        }
+
+        for( char c: t)
+        {
+            Bhash[c]++;
+        }
+
+        int loop=256;
+        while( loop-- )
+        {
+            if( Ahash[loop]!= Bhash[loop] )
+            {
+                return false;
+            }
+        }
+
+
+        return true;
+    }
+};
+```
+
+
+
+
+
+### 2.9.高精度运算
+
+#### Ⓜ️[66. 加一](https://leetcode-cn.com/problems/plus-one/)
+
+```cpp
+class Solution {
+public:
+    vector<int> plusOne(vector<int>& digits) {
+
+        vector<int> ret;
+        reverse( digits.begin(), digits.end() );
+        int carry=1;
+        for( auto num : digits )
+        {
+            int CurNum=carry+num;
+            carry=CurNum/10;
+            CurNum=CurNum%10;
+            ret.push_back( CurNum );
+        }
+
+        if( 0!=carry )
+        {
+            ret.push_back( carry );
+        }
+
+        reverse( ret.begin(), ret.end() );
+
+        return ret;
+    }
+};
+```
+
+
+
+#### Ⓜ️[67. 二进制求和](https://leetcode-cn.com/problems/add-binary/)
+
+```cpp
+class Solution {
+public:
+    string addBinary(string a, string b) {
+        reverse( a.begin(), a.end() );
+        reverse( b.begin(), b.end() );
+
+        vector<int> solve;
+        int pos=0;
+        int carry=0;//进位
+        while( pos<a.size() && pos<b.size() )
+        {
+            int num=( a[pos]-'0' )+ ( b[pos]-'0' )+carry;
+            carry=num/2;
+            solve.push_back( num%2 );
+
+            ++pos;
+        }
+
+        while( pos<a.size() )
+        {
+            int num=( a[pos]-'0' )+carry;
+            carry=num/2;
+            solve.push_back( num%2 );
+
+            ++pos;
+        }
+
+        while( pos<b.size() )
+        {
+            int num=( b[pos]-'0' )+carry;
+            carry=num/2;
+            solve.push_back( num%2 );
+
+            ++pos;
+        }
+
+        if( carry )
+        {
+            solve.push_back( 1 );
+        }
+
+        reverse( solve.begin(), solve.end() );
+        string res;
+        for( auto num: solve )
+        {
+            res+=(num+'0');
+        }
+        return res;
+        
+    }
+};
+```
+
+
+
+#### Ⓜ️[415. 字符串相加](https://leetcode-cn.com/problems/add-strings/)
+
+```cpp
+class Solution {
+public:
+    string addStrings(string num1, string num2) {
+
+        if( 0==num1.size() )
+        {
+            return num2;
+        }
+
+        if( 0==num2.size() )
+        {
+            return num1;
+        }
+        
+        string res;
+        reverse( num1.begin(), num1.end() );
+        reverse( num2.begin(), num2.end() );
+
+        int pos=0;
+        int carry=0;
+        while( pos<num1.size() && pos<num2.size() )
+        {
+            int temp=( num1[ pos ]-'0' )+ ( num2[pos]-'0' )+carry;
+            carry=temp/10;
+            temp%=10;
+            res+=( temp+'0' );
+
+            ++pos;
+        }
+
+        while( pos<num1.size() )
+        {
+            int temp=( num1[ pos ]-'0' )+carry;
+            carry=temp/10;
+            temp%=10;
+            res+=( temp+'0' );
+
+            ++pos;
+        }
+        
+        while( pos<num2.size() )
+        {
+            int temp=( num2[ pos ]-'0' )+carry;
+            carry=temp/10;
+            temp%=10;
+            res+=( temp+'0' );
+            
+            ++pos;
+        }
+
+        if( carry )
+        {
+            res+='1';
+        }
+        
+        reverse( res.begin(), res.end() );
+        return res;
+    }
+};
+```
+
+
+
+
+
+#### Ⓜ️[43. 字符串相乘](https://leetcode-cn.com/problems/multiply-strings/)
 
 
 
