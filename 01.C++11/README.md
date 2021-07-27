@@ -2,7 +2,7 @@
 
 
 
-## 01.数组
+## ✅01.数组
 
 ### 1.1.数组的遍历
 
@@ -298,6 +298,35 @@ public:
 };
 ```
 
+### 1.3.数组的改变、移动
+
+| 题号                                                         | C++11 | Java8 |
+| ------------------------------------------------------------ | ----- | ----- |
+| [453. 最小移动次数使数组元素相等](https://leetcode-cn.com/problems/minimum-moves-to-equal-array-elements/) |       |       |
+| [665. 非递减数列](https://leetcode-cn.com/problems/non-decreasing-array/) |       |       |
+| ✅[283. 移动零](                                              |       |       |
+
+
+
+### 1.4.二维数组及滚动数组
+
+| 题号                                                         | 描述 | 状态 |
+| ------------------------------------------------------------ | ---- | ---- |
+| ✅[118. 杨辉三角](https://leetcode-cn.com/problems/pascals-triangle/) |      |      |
+| ✅[119. 杨辉三角 II](https://leetcode-cn.com/problems/pascals-triangle-ii/) |      |      |
+| [661. 图片平滑器](https://leetcode-cn.com/problems/image-smoother/) |      |      |
+| [598. 范围求和 II](https://leetcode-cn.com/problems/range-addition-ii/) |      |      |
+| [419. 甲板上的战舰](https://leetcode-cn.com/problems/battleships-in-a-board/) |      |      |
+
+
+
+### 1.5.数组的旋转
+
+| 题号                                                         | C++11 | 完成状态 |
+| ------------------------------------------------------------ | ----- | -------- |
+| ⭐️[189. 旋转数组](https://leetcode-cn.com/problems/rotate-array/) | 1     |          |
+| [396. 旋转函数](                                             |       |          |
+
 
 
 ### 1.6.特定顺序遍历二维数组
@@ -422,7 +451,645 @@ public:
 
 
 
-## 02.字符串
+## ✅02.链表
+
+### 2.1.链表的删除
+
+- Ⓜ️[203. 移除链表元素](https://leetcode-cn.com/problems/remove-linked-list-elements/)
+
+```cpp
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode* removeElements(ListNode* head, int val) {
+        //哑结点
+        ListNode * dummy=new ListNode(0x3f3f3f);
+        dummy->next=head;
+        ListNode * temp=dummy;
+
+        while( nullptr!=temp->next )
+        {
+            if( val==temp->next->val )
+            {
+                ListNode * del=temp->next;
+                temp->next=del->next;
+                delete del;
+                continue;
+            }
+            else 
+            {
+                temp=temp->next;
+            }
+        }
+
+        ListNode * del=dummy;
+        dummy=dummy->next;
+        delete del;
+        return dummy;
+    }
+};
+```
+
+
+
+- ⭐️[237. 删除链表中的节点](https://leetcode-cn.com/problems/delete-node-in-a-linked-list/)
+
+```cpp
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    void deleteNode(ListNode* node) {
+        node->val=node->next->val;
+        node->next=node->next->next;
+        //易容成那样，然后取而代之
+        //狸猫换太子
+        return ;
+    }
+};
+```
+
+
+
+### 2.3.链表的旋转与反转  
+
+#### ✅[61. 旋转链表](https://leetcode-cn.com/problems/rotate-list/)
+
+```cpp
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode* rotateRight(ListNode* head, int k) {
+        
+        if(!head || !head->next || k==0) return head;
+        ListNode *pos = head;
+        int size = 1;
+        while(pos && pos->next)
+        {
+            pos = pos -> next;
+            size ++;
+        }
+        int move = k % size;
+        if(move == 0) return head;
+        ListNode *cut = head;
+        for(int i=0; i<size-move-1; ++i) cut = cut -> next;
+        ListNode *result = cut -> next;
+        cut -> next = nullptr;
+        pos -> next = head;
+        return result;
+
+        
+
+    }
+};
+```
+
+
+
+#### ✅[24. 两两交换链表中的节点](https://leetcode-cn.com/problems/swap-nodes-in-pairs/)
+
+```cpp
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode* swapPairs(ListNode* head) {
+
+        ListNode * odd=new ListNode;
+        ListNode * even=new ListNode;
+        ListNode * one=odd;
+        ListNode * two=even;
+
+        int tag=1;
+        while( nullptr!=head )
+        {
+            if( tag&1 )
+            {
+                one->next=head;
+                one=one->next;
+            }
+            else
+            {
+                two->next=head;
+                two=two->next;
+            }
+            ++tag;
+            head=head->next;
+        }
+
+        one->next=nullptr;
+        two->next=nullptr;
+
+        ListNode * ret=new ListNode;
+        ListNode * temp=ret;
+        odd=odd->next;
+        even=even->next;
+
+        while( nullptr!=odd && nullptr!=even )
+        {
+            ListNode * evenTemp=even;
+            even=even->next;
+            temp->next=evenTemp;
+            temp=temp->next;
+
+            ListNode * oddTemp=odd;
+            odd=odd->next;
+            temp->next=oddTemp;
+            temp=temp->next;
+
+            
+        }
+
+        if( nullptr!=odd )
+        {
+            temp->next=odd;
+        }
+        
+        if( nullptr!=even )
+        {
+            temp->next=even;
+        }
+
+        return ret->next;
+
+
+    }   
+};
+```
+
+
+
+
+
+#### Ⓜ️[206. 反转链表](https://leetcode-cn.com/problems/reverse-linked-list/)
+
+```cpp
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode* reverseList(ListNode* head) {
+        ListNode * sentry=nullptr;	//哨兵
+        while( nullptr!=head )
+        {
+            ListNode * temp=head->next;
+            head->next=sentry;
+            sentry=head;
+            head=temp;
+        }
+        return sentry;
+    }
+};
+```
+
+
+
+
+
+#### Ⓜ️[92. 反转链表 II](https://leetcode-cn.com/problems/reverse-linked-list-ii/)
+
+
+
+
+
+#### [25. K 个一组翻转链表](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/)
+
+
+
+
+
+
+
+### 2.4.链表高精度加法 
+
+- Ⓜ️[2. 两数相加](https://leetcode-cn.com/problems/add-two-numbers/)
+
+```cpp
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+
+        //头结点
+        ListNode *rt=new ListNode(0);
+        
+
+        ListNode * pre=rt;//表示当前节点
+        int tag=1;//头结点
+        int carry=0;//进位
+
+        while(NULL!=l1&&NULL!=l2)
+        {
+            if(tag)
+            {
+                rt->val=((l1->val+l2->val+carry)%10);
+                carry=(l1->val+l2->val+carry)/10;
+                tag=0;
+                l1=l1->next;
+                l2=l2->next;
+            }
+            else
+            {
+                pre->next=new ListNode(((l1->val+l2->val+carry)%10));
+                carry=(l1->val+l2->val+carry)/10;
+                pre=pre->next;
+
+                l1=l1->next;
+                l2=l2->next;
+            }
+        }
+
+        if(NULL==l1&&NULL!=l2)
+        {
+            while(NULL!=l2)
+            {
+                pre->next=new ListNode((l2->val+carry)%10);
+                carry=(l2->val+carry)/10;
+                l2=l2->next;
+                pre=pre->next;
+            }
+        }
+        
+
+        if(NULL!=l1&&NULL==l2)
+        {
+            while(NULL!=l1)
+            {
+                pre->next=new ListNode((l1->val+carry)%10);
+                carry=(l1->val+carry)/10;
+                l1=l1->next;
+                pre=pre->next;
+            }
+        }
+
+        if(0!=carry)
+        {
+            pre->next=new ListNode(carry);
+        }
+
+        return rt;
+
+    }
+};
+```
+
+
+
+
+
+- Ⓜ️[445. 两数相加 II](https://leetcode-cn.com/problems/add-two-numbers-ii/)
+
+```cpp
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+
+ListNode * reverseList( ListNode * root )
+{
+    ListNode * sentry=nullptr;
+    while( nullptr!=root )
+    {
+        ListNode * temp=root->next;
+        root->next=sentry;
+        sentry=root;
+        root=temp;
+    }
+
+    return sentry;
+}
+
+class Solution {
+public:
+    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+        if( nullptr==l1 )
+        {
+            return l2;
+        }
+
+        if( nullptr==l2 )
+        {
+            return l1;
+        }
+
+        l1=reverseList( l1 );
+        l2=reverseList( l2 );
+        
+        ListNode * sentry=new ListNode(-1);
+        ListNode * ret=sentry;
+
+        int carry=0;
+        ListNode * curOne=l1;
+        ListNode * curTwo=l2;
+        while( nullptr!=curOne && nullptr!=curTwo )
+        {
+            int temp=curOne->val  + curTwo->val + carry;
+            carry=temp/10;
+            temp%=10;
+
+            sentry->next=new ListNode( temp );
+            sentry=sentry->next;
+
+            curOne=curOne->next;
+            curTwo=curTwo->next;
+        }
+
+        while( nullptr!=curOne )
+        {
+            int temp=curOne->val  + carry;
+            carry=temp/10;
+            temp%=10;
+
+            sentry->next=new ListNode( temp );
+            sentry=sentry->next;
+
+            curOne=curOne->next;
+        }
+
+        while( nullptr!=curTwo )
+        {
+            int temp= curTwo->val + carry;
+            carry=temp/10;
+            temp%=10;
+
+            sentry->next=new ListNode( temp );
+            sentry=sentry->next;
+
+            curTwo=curTwo->next;
+        }
+        
+        if( carry )
+        {
+            sentry->next=new ListNode( carry );
+            sentry=sentry->next;
+        }
+
+        ListNode * del=ret;
+        ret=ret->next;
+        delete del;
+        
+        return reverseList( ret );
+    }
+};
+```
+
+### 2.5.链表的合并 
+
+- Ⓜ️[21. 合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/)
+
+```cpp
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
+        
+        if(nullptr==l1)
+        {
+            return l2;
+        }
+
+        if(nullptr==l2)
+        {
+            return l1;
+        }
+
+        ListNode * rt;
+        if(l1->val < l2->val)
+        {
+            rt=l1;
+            l1=l1->next;
+        }
+        else
+        {
+            rt=l2;
+            l2=l2->next;
+        }
+
+        //当前指针
+        ListNode * p=rt;
+
+        while(nullptr!=l1 && nullptr!=l2)
+        {
+            if(l1->val < l2->val)
+            {
+                p->next=l1;
+                p=p->next;
+
+                l1=l1->next;
+            }
+            else
+            {
+                p->next=l2;
+                p=p->next;
+                
+                l2=l2->next;
+            }
+        }
+
+        if(nullptr==l1)
+        {
+            p->next=l2;
+        }
+        else
+        {
+            p->next=l1;
+        }
+
+        return rt;
+    }
+};
+```
+
+
+
+- Ⓜ️[23. 合并K个升序链表](https://leetcode-cn.com/problems/merge-k-sorted-lists/)
+
+```cpp
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+
+ListNode * mymege( ListNode * a , ListNode * b )
+{
+    if( nullptr==a )
+    {
+        return b;
+    }
+
+    if( nullptr==b )
+    {
+        return a;
+    }
+
+    ListNode * rt;
+    if( (a->val)<(b->val) )
+    {
+        rt=a;
+        a=a->next;
+        
+    }
+    else
+    {
+        rt=b;
+        b=b->next;
+       
+    }
+
+
+    ListNode * temp=rt;
+    while( nullptr!=a && nullptr!=b )
+    {
+        if( (a->val)<(b->val) )
+        {
+            temp->next=a;
+            temp=temp->next;
+
+            a=a->next;
+            
+        }
+        else
+        {
+            temp->next=b;
+            temp=temp->next;
+
+            b=b->next;
+            
+        }
+
+    }
+
+    while( nullptr!=a )
+    {
+        temp->next=a;
+        temp=temp->next;
+
+        a=a->next;
+        
+    }
+
+    while( nullptr!=b )
+    {
+        temp->next=b;
+        temp=temp->next;
+
+        b=b->next;
+        
+    }
+
+    temp->next=nullptr;
+
+    return rt;
+}
+
+
+class Solution {
+public:
+    ListNode* mergeKLists(vector<ListNode*>& lists) {
+        
+        int len=lists.size();
+        if( 0==len )
+        {
+            return nullptr;
+        }
+
+        queue<ListNode *> temp;
+        
+        while(len-- )
+        {
+            temp.push( lists[len] );
+        }
+
+        while( 1!=temp.size() )
+        {
+            ListNode *a=temp.front();
+            temp.pop();
+            ListNode *b=temp.front();
+            temp.pop();
+
+            ListNode * c=mymege( a , b );
+            temp.push(c);
+        }
+
+        return temp.front();
+
+    }
+};
+```
+
+
+
+
+
+
+
+## ✅03.字符串
 
 
 
@@ -815,7 +1482,7 @@ public:
 
 
 
-## 05.双指针法
+## ✅05.双指针法
 
 #### 1、头尾指针
 
@@ -954,6 +1621,37 @@ public:
 ```
 
 
+
+
+
+
+
+## ✅15.常用技巧与算法
+
+
+
+## 15.1.博弈论
+
+
+
+#### Ⓜ️[292. Nim 游戏](https://leetcode-cn.com/problems/nim-game/)
+
+```cpp
+class Solution {
+public:
+    bool canWinNim(int n) {
+            if(0==n%4)
+            {
+                return false;
+            }
+            else
+            {
+                //4x+1,4x+2,4x+3都可以，反正我的后面几次和他弄成4
+                return true;
+            }
+    }
+};
+```
 
 
 
