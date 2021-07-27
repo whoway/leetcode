@@ -4,31 +4,39 @@
 
 > 本项目『[网页版](https://hacv.github.io/leetcode/)』
 
-- C++11版
-- Java8版
+- C++11版[题解](./01.C++11/README.md)
+- Java8版[题解](./02.Java8/README.md)
+- Python3版[题解](./04.Python3/README.md)
 
-```txt
-- Scala版
-- Python3版
-- Go版
-```
+> 以最优解进行解答
 
 
 
 
 
-## 刷题顺序
+## Ⓜ️约定标记
+
+- 💦水题，只做一遍
+- Ⓜ️模板题，可记忆
+- ⭐️启发性题，记忆+学习
+- ✅已完成题目，待定级别
+
+
+
+
+
+##  ✅刷题顺序
 
 ## 01.数组
 
 1.1.数组的遍历
 
-| 题号                                                         | C++11 | Java8 | Scala | Python3 | Go   |
-| ------------------------------------------------------------ | ----- | ----- | ----- | ------- | ---- |
-| [485. 最大连续1的个数](https://leetcode-cn.com/problems/max-consecutive-ones/) | 1     |       |       |         |      |
-| [495. 提莫攻击](https://leetcode-cn.com/problems/teemo-attacking/) | 1     |       |       |         |      |
-| [414. 第三大的数](https://leetcode-cn.com/problems/third-maximum-number/) | 1     |       |       |         |      |
-| [628. 三个数的最大乘积](https://leetcode-cn.com/problems/maximum-product-of-three-numbers/) | 1     |       |       |         |      |
+| 题号                                                         | C++11 | Java8 | Python3 |
+| ------------------------------------------------------------ | ----- | ----- | ------- |
+| ⭐️[485. 最大连续1的个数](https://leetcode-cn.com/problems/max-consecutive-ones/) | 1     |       |         |
+| 💦[495. 提莫攻击](https://leetcode-cn.com/problems/teemo-attacking/) | 1     |       |         |
+| ✅[414. 第三大的数](https://leetcode-cn.com/problems/third-maximum-number/) | 1     |       |         |
+| ⭐️[628. 三个数的最大乘积](https://leetcode-cn.com/problems/maximum-product-of-three-numbers/) | 1     |       |         |
 
 
 
@@ -36,14 +44,14 @@
 
 1.2.统计数组中的元素
 
-| 题号                                                         | C++11 | Java8 |      |      |      |
-| ------------------------------------------------------------ | ----- | ----- | ---- | ---- | ---- |
-| [645. 错误的集合](https://leetcode-cn.com/problems/set-mismatch/) | 1     |       |      |      |      |
-| [697. 数组的度](https://leetcode-cn.com/problems/degree-of-an-array/) |       |       |      |      |      |
-| [448. 找到所有数组中消失的数字](https://leetcode-cn.com/problems/find-all-numbers-disappeared-in-an-array/) | 1     |       |      |      |      |
-| [442. 数组中重复的数据](https://leetcode-cn.com/problems/find-all-duplicates-in-an-array/) |       |       |      |      |      |
-| [41. 缺失的第一个正数](https://leetcode-cn.com/problems/first-missing-positive/) |       |       |      |      |      |
-| [274. H 指数](https://leetcode-cn.com/problems/h-index/)     |       |       |      |      |      |
+| 题号                                                         | C++11 | Java8 | Python3 |
+| ------------------------------------------------------------ | ----- | ----- | ------- |
+| [645. 错误的集合](https://leetcode-cn.com/problems/set-mismatch/) | 1     |       |         |
+| [697. 数组的度](https://leetcode-cn.com/problems/degree-of-an-array/) |       |       |         |
+| [448. 找到所有数组中消失的数字](https://leetcode-cn.com/problems/find-all-numbers-disappeared-in-an-array/) | 1     |       |         |
+| ⭐️[442. 数组中重复的数据](https://leetcode-cn.com/problems/find-all-duplicates-in-an-array/) |       |       |         |
+| [41. 缺失的第一个正数](https://leetcode-cn.com/problems/first-missing-positive/) |       |       |         |
+| [274. H 指数](https://leetcode-cn.com/problems/h-index/)     |       |       |         |
 
 
 
@@ -79,10 +87,10 @@
 
 1.5.数组的旋转
 
-| 题号                                                         | 描述 | 完成状态 |
-| ------------------------------------------------------------ | ---- | -------- |
-| [189. 旋转数组](https://leetcode-cn.com/problems/rotate-array/) |      |          |
-| [396. 旋转函数](https://leetcode-cn.com/problems/rotate-function/) |      |          |
+| 题号                                                         | C++11 | 完成状态 |
+| ------------------------------------------------------------ | ----- | -------- |
+| ⭐️[189. 旋转数组](https://leetcode-cn.com/problems/rotate-array/) | 1     |          |
+| [396. 旋转函数](https://leetcode-cn.com/problems/rotate-function/) |       |          |
 
 
 
@@ -129,9 +137,9 @@
 
 2.1.字符	
 
-| 题号                                                         | 描述 | 状态 |
-| ------------------------------------------------------------ | ---- | ---- |
-| [520. 检测大写字母](https://leetcode-cn.com/problems/detect-capital/) |      |      |
+| 题号                                                         | C++11 | Python3 |
+| ------------------------------------------------------------ | ----- | ------- |
+| 💦[520. 检测大写字母](https://leetcode-cn.com/problems/detect-capital/) | 1     |         |
 
 
 
@@ -139,9 +147,9 @@
 
 2.2.回文串的定义	
 
-| 题号                                                         |      |      |
-| ------------------------------------------------------------ | ---- | ---- |
-| [125. 验证回文串](https://leetcode-cn.com/problems/valid-palindrome/) |      |      |
+| 题号                                                         | C++11 |      |
+| ------------------------------------------------------------ | ----- | ---- |
+| ✅[125. 验证回文串](https://leetcode-cn.com/problems/valid-palindrome/) | 1     |      |
 
 
 
@@ -168,12 +176,12 @@
 
 2.5.字符串的反转	
 
-| 题号                                                         | 描述 | 状态 |
-| ------------------------------------------------------------ | ---- | ---- |
-| [344. 反转字符串](https://leetcode-cn.com/problems/reverse-string/) |      |      |
-| [541. 反转字符串 II](https://leetcode-cn.com/problems/reverse-string-ii/) |      |      |
-| [557. 反转字符串中的单词 III](https://leetcode-cn.com/problems/reverse-words-in-a-string-iii/) |      |      |
-| [151. 翻转字符串里的单词](https://leetcode-cn.com/problems/reverse-words-in-a-string/) |      |      |
+| 题号                                                         | C++11 | Java8 |
+| ------------------------------------------------------------ | ----- | ----- |
+| 💦[344. 反转字符串](https://leetcode-cn.com/problems/reverse-string/) |       |       |
+| [541. 反转字符串 II](https://leetcode-cn.com/problems/reverse-string-ii/) |       |       |
+| [557. 反转字符串中的单词 III](https://leetcode-cn.com/problems/reverse-words-in-a-string-iii/) |       |       |
+| [151. 翻转字符串里的单词](https://leetcode-cn.com/problems/reverse-words-in-a-string/) |       |       |
 
 
 
@@ -1531,6 +1539,6 @@
 
 ## 参考资料
 
->刷题目录参考自：noone_：https://leetcode-cn.com/circle/article/48kq9d/\
+>刷题目录参考自：noone_：https://leetcode-cn.com/circle/article/48kq9d/
 
 - 笔者对其进行了改进，并且给其加上链接

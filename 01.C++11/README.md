@@ -6,11 +6,7 @@
 
 ### 1.1.数组的遍历
 
-
-
-####  [485. 最大连续 1 的个数](https://leetcode-cn.com/problems/max-consecutive-ones/)
-
-
+#### [485. 最大连续 1 的个数](https://leetcode-cn.com/problems/max-consecutive-ones/)
 
 1、STL的堆
 
@@ -301,6 +297,88 @@ public:
     }
 };
 ```
+
+
+
+
+
+## 02.字符串
+
+
+
+### 2.1.字符
+
+- 💦[520. 检测大写字母](https://leetcode-cn.com/problems/detect-capital/)
+
+```cpp
+class Solution {
+public:
+    bool detectCapitalUse(string word) {
+        int CountUpper=0;
+        for( auto c: word )
+        {
+            if( isupper(c) )
+            {
+                ++CountUpper;
+            }
+        }
+
+        if( 0==CountUpper || word.size()==CountUpper )
+        {
+            return true;
+        }
+
+        if( 1==CountUpper && isupper( word[0] ) )
+        {
+            return true;
+        }
+
+        return false;
+    }
+};
+```
+
+
+
+### 2.2.回文串的定义
+
+- [125. 验证回文串](https://leetcode-cn.com/problems/valid-palindrome/)
+
+
+
+
+
+### 2.3.公共前缀
+
+
+
+### 2.4.单词
+
+
+
+### 2.5.字符串的反转
+
+- [344. 反转字符串](https://leetcode-cn.com/problems/reverse-string/)
+
+```cpp
+class Solution {
+public:
+    void reverseString(vector<char>& s) {
+        
+        int Left=0,Right=s.size()-1;
+        while( Left<Right )
+        {
+            swap( s[Left], s[Right] );
+            ++Left;
+            --Right;
+        }
+        return ;
+        
+    }
+};
+```
+
+
 
 
 
