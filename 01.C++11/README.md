@@ -686,6 +686,63 @@ public:
 
 #### Ⓜ️[92. 反转链表 II](https://leetcode-cn.com/problems/reverse-linked-list-ii/)
 
+```cpp
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode* reverseBetween(ListNode* head, int left, int right) {
+        if( left<1 || right<1 || left>right )
+        {
+            throw "errorInput";
+        }
+        //-----------------------主题部分----------------------------
+        if( nullptr==head || nullptr==head->next )
+        {
+            return head;
+        }
+        ListNode * dummy=new ListNode( 0x3f3f3f );
+        dummy->next=head;
+        
+        //表示已经到了第1个节点
+        ListNode * pre=dummy;
+        ListNode * cur=head;
+        int beginLoop=left-1;
+        int endLoop=right;
+        while( beginLoop-- )
+        {
+            cur=cur->next;
+            pre=pre->next;
+            --endLoop;
+        }
+        
+        ListNode * sentry=nullptr;
+        while( endLoop-- )
+        {
+            ListNode * temp=cur->next;
+            cur->next=sentry;
+            sentry=cur;
+            cur=temp;
+        }
+        pre->next->next=cur;
+        pre->next=sentry;
+        //-----------------------主题部分----------------------------
+        ListNode * del=dummy;
+        dummy=dummy->next;
+        delete del;
+        return dummy;
+    }
+};
+```
+
 
 
 
